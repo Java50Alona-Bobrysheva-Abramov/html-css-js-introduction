@@ -1,67 +1,154 @@
+@font-face {
+    font-family: airstream;
+    src: url(fonts/Airstream-webfont.svg);
+    src: url(fonts/Airstream-webfont.woff);
+}
+@font-face {
+    font-family: lakeshor;
+    src: url(fonts/LAKESHOR-webfont.svg);
+    src: url(fonts/LAKESHOR-webfont.woff);
+}
+
 html {
-        height: 100%;
+    height: 100%;
 }
 body {
-        height: 100%;
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
-        margin:0;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    margin:0;
 }
 .logo {
 
-        display: block;
-        text-align: center;
-        background-color: azure;
-        font-size: 1.5em;
-        text-transform: uppercase;
+    display: block;
+    text-align: center;
+    background-color: azure;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: lakeshor;
 }
-main {
-    display: flex ;
-    flex-direction:column;
+     
+.h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+
+.main-class {
+display: flex ;
+flex-direction:column;
+justify-content: center;
+flex-grow: 1;
+}
 .details-container {
-    display: flex ;
-    flex-direction: column;
-    align-items: center;
+display: flex ;
+flex-direction: column;
+align-items: center;
+margin-bottom: 2vh;
 }
 .details-image {
-    width: 60vw;
-    height: 50vw;
+width: 60vw;
+height: 50vw;
+border-radius: 25%;
 }
 .details-title {
-    display: block;
-    background-color: blanchedalmond;
+display: block;
+background-color: blanchedalmond;
 }
 .thumbnails-list {
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 30vh;
-    overflow-y: scroll;
-    list-style: none;
-    justify-content: space-around;
-    padding-left: 0;
+display: flex;
+flex-wrap: wrap;
+max-height: 37vh;
+overflow-y: scroll;
+list-style: none;
+justify-content: space-around;
+padding-left: 0;
+margin-top: 3vh;
 }
 
 .thumbnails-item {
-    border: solid  2px blueviolet;
-   margin-top: 2vh; 
-   border-radius: 25%;
+border: solid  2px blueviolet;
+margin-top: 2vh; 
+border-radius: 25%;
 overflow: hidden;
 }
 
 .thumbnails-anchor {
-
+text-decoration: none;
 }
 
 .thumbnails-image {
-    width: 25vw;
-    height: 15vw;
-    display: block;
+width: 25vw;
+height: 15vw;
+display: block;
 }
 
 .thumbnails-title {
-    display: block;
-    text-align: center;
-    background-color: brown;
+display: block;
+text-align: center;
+background-color:greenyellow;
+color: cadetblue;
 }
+
+@media (min-width: 560px) {
+
+.logo {
+    font-size: 1em;
+}
+
+.main-class {
+    flex-direction: row;
+    justify-content: space-around;
+}
+.details-image {
+    width: 45vw;
+    height: 35vw;
+
+}
+
+.details-container {
+    justify-content: center;
+    margin-bottom: 0;
+}
+.thumbnails-list {  
+    order: -1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 75vh;
+    justify-content:flex-start ;
+
+}
+.thumbnails-item {
+    min-height: 10vh; 
+}
+
+.thumbnails-image{
+    width: 12vw;
+    height: 8vw;
+}
+
+.thumbnails-title{
+    height: 2vw;
+}
+
+    }
+
+
+@media (min-width: 1000px) {
+.details-container {
+    margin-top: 5vh;
+    margin-right: 5vw;
+}
+.details-image {
+    width: 45vw;
+    height: 35vw;
+}
+.thumbnails-list {
+    padding-right: 2vw;
+    margin-top: 2.5vh;
+    max-height: 86vh;
+}
+.thumbnails-title {
+    font-size: 1.5em;
+}
+    }
