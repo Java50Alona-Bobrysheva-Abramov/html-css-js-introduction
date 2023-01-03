@@ -73,6 +73,8 @@ border-radius: 25%;
 display: block;
 background-color: blanchedalmond;
 position: absolute;
+font: size 2em; airstream;
+font-style: italic;
 bottom: 3.5vh;
 left: -2vw;
 /*bottom: 50%vh;
