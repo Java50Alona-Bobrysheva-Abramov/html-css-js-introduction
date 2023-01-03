@@ -16,4 +16,4 @@ for (let i = 0; i < anchorElements.length; i++) {
     anchorElements[i].addEventListener("click",function(){
         setDetails(anchorElements[i]);
     } )
-}
+}  
