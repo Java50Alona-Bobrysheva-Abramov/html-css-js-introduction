@@ -17,3 +17,4 @@ for (let i = 0; i < anchorElements.length; i++) {
         setDetails(anchorElements[i]);
     } )
 }  
+      
