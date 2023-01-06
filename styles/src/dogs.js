@@ -4,11 +4,16 @@ const anchorElements = document.querySelectorAll(".thumbnails-anchor");
 const mainElement = document.querySelector(".main-class")
 const HIDDEN = "hidden";
 const hideButtonElement = document.querySelector("#hide-button");
-
-
+const detailsContainer = document.querySelector(".details-container");
+const IS_POINT = "is-point";
 
 function showDetails (){
     mainElement.classList.remove(HIDDEN);
+    detailsContainer.classList.add(IS_POINT);
+    setTimeout(function() {
+        detailsContainer.classList.remove(IS_POINT);
+    })
+
 }
 
 
@@ -28,6 +33,14 @@ function setDetails(anchor) {
     showDetails();
 
     const color = anchor.getAttribute("data-text-color");
+
+    audio.src = anchor.getAttribute("data-details-bark");
+    audio.play();
+    setTimeout(function () {
+        audio.pause();
+    }, 5000)
+
+
     if (color) {
         detailsTitle.style.color = color;
     } else {

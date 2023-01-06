@@ -64,6 +64,7 @@ flex-direction: column;
 align-items: center;
 margin-bottom: 2vh;
 /*position: relative;*/
+transition: 5s cubic-bezier(0.8, 2, 0.2, 1);
 
 }
 
@@ -152,6 +153,13 @@ background-color:greenyellow;
 color: cadetblue;
 height: var(--thumbnails-title-height);
 }
+
+.is-point {
+    transform: scale(0.001);
+   /* transform: 5s;*/
+    transition: 0s;
+}
+
 
 @media (min-width: 560px) {
     body {
