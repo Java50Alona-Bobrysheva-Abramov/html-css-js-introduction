@@ -6,6 +6,7 @@ const HIDDEN = "hidden";
 const hideButtonElement = document.querySelector("#hide-button");
 const detailsContainer = document.querySelector(".details-container");
 const IS_POINT = "is-point";
+const audio = document.querySelector("#audio");
 
 function showDetails (){
     mainElement.classList.remove(HIDDEN);
