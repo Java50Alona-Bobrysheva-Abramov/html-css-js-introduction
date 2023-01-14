@@ -16,7 +16,7 @@ function showDetails (){
     })
 
 }
-
+      
 
 function hideDetails (){
     mainElement.classList.add(HIDDEN);
