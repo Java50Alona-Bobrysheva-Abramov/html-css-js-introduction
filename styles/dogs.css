@@ -51,9 +51,9 @@ flex-grow: 1;
 }
 
 .main-class.hidden {
-/*--thumnails-image-width:30vw;
+--thumnails-image-width:30vw;
 --thumbnails-image-width:20vw;
---thumbnails-title-height: calc(var(--thumbnails-title-height)*0.33);*/
+--thumbnails-title-height: calc(var(--thumbnails-title-height)*0.33);
 justify-content: space-around;
 
 }
@@ -132,9 +132,6 @@ max-height:calc(var(--thumnails-image-height) + var (--thumbnails-title-height))
     /*margin-left:1vw;*/
 
 }
-
-
-
 
 .thumbnails-anchor {
 text-decoration: none;

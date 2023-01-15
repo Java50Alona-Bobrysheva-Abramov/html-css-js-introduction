@@ -14,10 +14,8 @@ function showDetails (){
     setTimeout(function() {
         detailsContainer.classList.remove(IS_POINT);
     })
-
 }
       
-
 function hideDetails (){
     mainElement.classList.add(HIDDEN);
 }
@@ -39,7 +37,7 @@ function setDetails(anchor) {
     audio.play();
     setTimeout(function () {
         audio.pause();
-    }, 5000)
+    }, 7000)
 
 
     if (color) {
