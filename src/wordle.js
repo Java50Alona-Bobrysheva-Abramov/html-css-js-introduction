@@ -22,7 +22,7 @@ const wordsForGuess = ["pappy", "apple", "table", "gold", "silver", "index",
      gameResultElement.innerHTML = "";
      trialsElement.innerHTML = `remained trials ${trials}`;
      guessInputElement.value = '';//0 abcd
- }
+ }        
  function getWord() {
     const index = Math.trunc(Math.random() * wordsForGuess.length);
     return wordsForGuess[index];
