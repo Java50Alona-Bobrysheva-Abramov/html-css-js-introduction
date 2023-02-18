@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/Screen-Shot-2022-02-06-at-11.39.54-AM.png" type="image/x-icon">
-    <title>Wordle game</title>
-    <link rel="stylesheet" href="styles/wordle.css">
+    <title>Marvels-field</title>
+    <link rel="stylesheet" href="styles/marvels.css">
+    <link rel="shortcut icon" href="images/a.png" type="image/x-icon">
+
 </head>
-
 <body>
-
     <header>
-        <h3 class="logo">Wordle Game</h3>
+        <h3 class="logo">Marvels Field Game</h3>
     </header>
-    <input class="guess-input" type="text" onchange="onChange()" placeholder="enter guess word">
-    <section class="guess-letters">
+    <section class="field">
+        <p id="question"></p>
+        <input type="text" readonly onchange="checkWord()" id="word-input"
+         placeholder="enter word">
+         <div class="letter-row">
+            <label id="letters-remained"></label>
+            <input type="text" minlength="1" maxlength="1" onchange="processLetter()"
+            id="letter-input"> 
+         </div>
+        
+        
+    </section>
+    <section class="word">
 
     </section>
-    <section class="game-status">
-        <p class="trials-remained"></p>
-        <p class="game-result"></p>
-        <button class="play-again" onclick="startGame()">Play again</button>
+    <section class="result">
+        <p id="result-message"></p>
+        <button onclick="startGame()" id="play-again">play again</button>
     </section>
-
-    <script src="src/wordle.js"></script>
+    <button id="guess-button" onclick="takeChance()">guess</button>
+    <script src="src/marvels.js"></script>
 </body>
-   
 </html>
