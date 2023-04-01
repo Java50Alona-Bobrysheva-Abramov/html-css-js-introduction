@@ -10,4 +10,4 @@ export const employeeConfig = {
     maxYear: 2001,
     minSalary: 5000,
     maxSalary: 50000,
-}
+}   
