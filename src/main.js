@@ -1,32 +1,18 @@
-import { Company, createEmployee } from "./service/company.js";
-import { EmployeeForm } from "./ui/employee-form.js";
-import { Table } from "./ui/table.js";
+import { sleep } from "./utils/sleep.js";
+import { VideoPlayer, VideoPlayer } from "./service/ui/video-player.js";
+import {DataForm} from "./service/ui/utils/input-data-form.js";
+import {checkPlayingTime} from"./service/checkTime.js";
+const dataForm = new DataForm("form-section");
+const VideoPlayer = new VideoPlayer("video-section");
+dataForm.addHandler(async (data)=>{
 
+let res = checkPlayingTime(data.time)
+if (!res)   {
 
-const schema = [
-    {columnName: 'Employee ID', fieldName: 'id'},
-    {columnName: 'Name', fieldName: 'name'},
-    {columnName: "Birth Year", fieldName: 'birthYear'},
-    {columnName: "Salary (NIS)", fieldName: 'salary'},
-    {columnName: "Country", fieldName: 'country'},
-    {columnName: "City", fieldName: 'city'}
-]
-const company = new Company();
-const employeeForm = new EmployeeForm("form-section");
-const tableEmployees = new Table("table-section", "Employees", schema);
-
-function addEmployee(employeeData) {
-
-    const employee = createEmployee(employeeData.name,
-        +employeeData.birthYear, +employeeData.salary,
-        employeeData.city, employeeData.country);
-        const res = company.addEmployee(employee);
-        if (!res.message) {
-            employeeData.id = res.id;
-            tableEmployees.addRow(employeeData);
-        }
-        return res.message
-
+VideoPlayer.setUrl(data.link);
+VideoPlayer.start();
+await sleep(data.time*1000);
+VideoPlayer.stop();
 }
-employeeForm.addFormHandler(addEmployee)
- 
+return res;
+})
